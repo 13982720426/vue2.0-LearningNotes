@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+    <title>v-model 数据源绑定</title>
+  </head>
+  <body>
+    <h1>v-model 数据原绑定</h1>
+    <hr />
+    <div id="app">
+      <p>原始文本数据：{{message}}</p>
+      <hr />
+      <h3>文本框</h3>
+      <p><input type="text" v-on:keyup.enter="onEnter" v-model="message" /></p>
+
+      <p>
+        v-model：
+        <input type="text" v-on:keyup.enter="onEnter" v-model="message" />
+      </p>
+      <p>
+        v-model.lazy：
+        <input type="text" v-on:keyup.enter="onEnter" v-model.lazy="message" />
+      </p>
+      <p>
+        v-model.number：
+        <input type="text" v-on:keyup.enter="onEnter" v-model.number="message" />
+      </p>
+      <p>
+        v-model.trim：
+        <input type="text" v-on:keyup.enter="onEnter" v-model.trim="message" />
+      </p>
+      <hr />
+      <h3>文本域</h3>
+      <textarea cols="30" rows="10"></textarea>
+      <hr />
+      <h3>多选框绑定一个值</h3>
+      <p>
+        <input type="checkbox" id="isTrue" v-model="isTrue" />
+        <label for="isTrue">{{isTrue}}</label>
+      </p>
+      <p>
+        <input type="checkbox" id="jack1" value="jack1" v-model="web_names" />
+        <label for="isTrue">jack1</label>
+        <input type="checkbox" id="jack2" value="jack2" v-model="web_names" />
+        <label for="isTrue">jack2</label>
+        <input type="checkbox" id="jack3" value="jack3" v-model="web_names" />
+        <label for="isTrue">jack3</label>
+      </p>
+      <p>{{web_names}}</p>
+    </div>
+
+    <script type="text/javascript">
+      var app = new Vue({
+        el: '#app',
+        data: {
+          message: 'hello world',
+          isTrue: true,
+          web_names: '[]',
+        },
+      });
+    </script>
+  </body>
+</html>

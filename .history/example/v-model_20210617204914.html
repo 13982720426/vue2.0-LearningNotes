@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+    <title>v-model 数据源绑定</title>
+  </head>
+  <body>
+    <h1>v-model 数据原绑定</h1>
+    <hr />
+    <div id="app">
+      <p>{{message}}</p>
+      <hr />
+      <input type="text" v-on:keyup.enter="onEnter" v-model="message" />
+    </div>
+
+    <script type="text/javascript">
+      var app = new Vue({
+        el: '#app',
+        data: {
+          message,
+        },
+        methods: {},
+      });
+    </script>
+  </body>
+</html>
