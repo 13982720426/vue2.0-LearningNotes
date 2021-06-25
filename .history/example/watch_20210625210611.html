@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>watch option</title>
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+  </head>
+  <body>
+    <h1>watch option</h1>
+    <hr />
+    <div id="app">
+      <p>今日温度：{{temperature}}</p>
+      <p>穿衣建议：{{suggestion}}</p>
+      <p>
+        <button @click="add">添加温度</button>
+        <button @click="reduce">减少温度</button>
+      </p>
+    </div>
+    <script type="text/javascript">
+      var app = new Vue({
+        el: '#app',
+        data: {
+          temperature: 14,
+          suggestion: '夹克长裙',
+        },
+      });
+    </script>
+  </body>
+</html>
